@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 // components
 import Navbar from './components/Navbar'
@@ -26,6 +26,7 @@ function App() {
           <Route path="/products/:id/info" element={<Info />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/company" element={<Navigate to="/about" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
